@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<title>Codepad</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#homeprojects" class="w3-bar-item w3-button"><b>c</b>odepad</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="index.html" class="w3-bar-item w3-button">Back to home</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20201123152927/PythonProjects11.png" alt="Python Projects - Beginner to Advanced - GeeksforGeeks" jsname="HiaYvf" jsaction="load:XAeZkd;" class="n3VNCb" data-noaft="1" style="width: 100%; height: 100%; margin: 0px;">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>C</b></span><span class="w3-hide-small w3-text-light-black">odepad</span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
+  </div>
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">for beginners</h3>
+  </div>
+<style>
+    h2{
+        background-color: black;
+        color: white;
+        font-family: bold;
+    }
+</style>
+
+  <h2>1.number guessing game</h2>
+  <hr>
+  <h2>import random<br>
+    import math<br>
+    # Taking Inputs<br><br>
+    lower = int(input("Enter Lower bound:- "))
+    <br>
+    # Taking Inputs<br><br>
+    upper = int(input("Enter Upper bound:- "))
+    <br>
+    
+    # generating random number between
+    <br><br>
+    # the lower and upper<br><br>
+    x = random.randint(lower, upper)<br>
+    print("\n\tYou've only ",<br>
+        round(math.log(upper - lower + 1, 2)),<br>
+        " chances to guess the integer!\n")<br>
+        <br>
+    # Initializing the number of guesses.<br><br>
+    count = 0<br>
+    
+    # for calculation of minimum number of<br><br>
+    # guesses depends upon range<br><br>
+    while count < math.log(upper - lower + 1, 2):<br>
+        count += 1<br>
+    <br>
+        # taking guessing number as input<br><br>
+        guess = int(input("Guess a number:- "))<br>
+    
+        # Condition testing<br><br>
+        if x == guess:<br>
+            print("Congratulations you did it in ",<br>
+                count, " try")<br>
+            # Once guessed, loop will break<br><br>
+            break<br>
+        elif x > guess:<br>
+            print("You guessed too small!")<br>
+        elif x < guess:<br>
+            print("You Guessed too high!")<br>
+            <br>
+    # If Guessing is more than required guesses,<br><br>
+    # shows this output.<br><br>
+    if count >= math.log(upper - lower + 1, 2):<br>
+        print("\nThe number is %d" % x)<br>
+        print("\tBetter Luck Next time!")<br>
+    
+    </h2>
+    <br>
+    <hr>
+    <br>
+    <h2>rock,paper,cissors game</h2>
+    <h2>
+        # import random module
+        <br>
+import random
+<br>
+# Print multiline instruction<br><br>
+# performstring concatenation of string<br><br>
+print("Winning Rules of the Rock paper scissor game as follows: \n"<br>
+								+"Rock vs paper->paper wins \n"<br>
+								+ "Rock vs scissor->Rock wins \n"<br>
+								+"paper vs scissor->scissor wins \n")<br>
+
+while True:<br>
+	print("Enter choice \n 1. Rock \n 2. paper \n 3. scissor \n")<br>
+	
+	# take the input from user<br><br>
+	choice = int(input("User turn: "))<br>
+
+	# OR is the short-circuit operator<br><br>
+	# if any one of the condition is true<br><br>
+	# then it return True value<br><br>
+	
+	# looping until user enter invalid input<br><br>
+	while choice > 3 or choice < 1:<br>
+		choice = int(input("enter valid input: "))<br>
+		
+        <br>
+	# initialize value of choice_name variable<br><br>
+	# corresponding to the choice value<br><br>
+	if choice == 1:<br>
+		choice_name = 'Rock'<br>
+	elif choice == 2:<br>
+		choice_name = 'paper'<br>
+	else:<br>
+		choice_name = 'scissor'<br>
+		
+	# print user choice<br><br>
+	print("user choice is: " + choice_name)<br>
+	print("\nNow its computer turn.......")<br>
+
+	# Computer chooses randomly any number<br><br>
+	# among 1 , 2 and 3. Using randint method<br><br>
+	# of random module<br><br>
+	comp_choice = random.randint(1, 3)
+	<br>
+	# looping until comp_choice value<br><br>
+	# is equal to the choice value<br><br>
+	while comp_choice == choice:<br>
+		comp_choice = random.randint(1, 3)
+
+	# initialize value of comp_choice_name<br><br>
+	# variable corresponding to the choice value<br><br>
+	if comp_choice == 1:<br>
+		comp_choice_name = 'Rock'<br>
+	elif comp_choice == 2:<br>
+		comp_choice_name = 'paper'<br>
+	else:<br>
+		comp_choice_name = 'scissor'<br>
+		
+	print("Computer choice is: " + comp_choice_name)<br>
+
+	print(choice_name + " V/s " + comp_choice_name)<br>
+
+	# condition for winning<br><br>
+	if((choice == 1 and comp_choice == 2) or<br>
+	(choice == 2 and comp_choice ==1 )):<br>
+		print("paper wins => ", end = "")<br>
+		result = "paper"<br>
+		<br>
+	elif((choice == 1 and comp_choice == 3) or<br>
+		(choice == 3 and comp_choice == 1)):<br>
+		print("Rock wins =>", end = "")<br>
+		result = "Rock"<br>
+	else:<br>
+		print("scissor wins =>", end = "")<br>
+		result = "scissor"<br>
+        <br>
+	# Printing either user or computer wins<br><br>
+	if result == choice_name:<br>
+		print("<== User wins ==>")<br>
+	else:<br>
+		print("<== Computer wins ==>")<br>
+		<br>
+	print("Do you want to play again? (Y/N)")<br>
+	ans = input()<br>
+    <br>
+
+	# if user input n or N then condition is True<br><br>
+	if ans == 'n' or ans == 'N':<br>
+		break<br>
+        <br>
+# after coming out of the while loop<br><br>
+# we print thanks for playing<br><br>
+print("\nThanks for playing")<br>
+
+    </h2>
+</body>
+</html>

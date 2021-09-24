@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<title>codepad</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<!-- Side Navigation -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+  <h1 class="w3-xxxlarge w3-text-theme">Side Navigation</h1>
+  <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+  <a href="about.1.html" class="w3-bar-item w3-button">about/a>
+  <a href="location.html" class="w3-bar-item w3-button">location</a>
+  
+</nav>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav .login-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width:120px;
+}
+
+.topnav .login-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background-color: #555;
+  color: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .login-container button:hover {
+  background-color: green;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .login-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .login-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: gray;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+</style>
+<div class="topnav">
+  <b><a class="active" href="#home">Codepad</a></b>
+  <a href="about.1.html">About</a>
+  <a href="location.html">location</a>
+  <div class="login-container">
+    <form action="/action_page.">
+      <input type="text" placeholder="email" name="username">
+      <input type="text" placeholder="password" name="psw">
+      <button type="submit">sign up</button>
+    </form>
+  </div>
+  <div class="search-container">
+    <form action="">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit">search</button>
+    </form>
+    
+  </div>
+</div>
+<style>
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .container .btn {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(139, 147, 182);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .container .btn:hover {
+    background-color: rgb(0, 255, 21);
+  }
+  .container .btnn {
+    position: absolute;
+    top: 75%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #f00;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .container .btnn:hover:hover {
+    background-color: #f00;
+  }
+  .container .btnnn {
+    position: absolute;
+    top: 75%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(57, 78, 145);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .container .btnnn:hover:hover {
+    background-color: rgb(57, 78, 145);
+  }
+  
+  </style>
+  <div class="container">
+<img src="https://images.indianexpress.com/2020/12/pixabay_coding-1200.jpg" alt="Are we putting pressure on kids to learn coding too early? | Parenting  News,The Indian Express" jsname="HiaYvf" jsaction="load:XAeZkd;" class="n3VNCb" data-noaft="1" style="width: 100%; height: 500px; margin: 0px;">
+<button class="btn"><b>c</b>odepad</button>
+<!-- <button class="btnn">web devlopment</button>
+<button class="btnnn">Tech fun</button> -->
+</div>
+
+
+
+     
+<div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>projects</h3><br>
+  <img src="https://www.itprotoday.com/sites/itprotoday.com/files/styles/article_featured_retina/public/programming%20evolution.jpg?itok=WTj9-yNz" alt="Programming Evolution: How Coding Has Grown Easier In the Past Decade | IT  Pro" jsname="HiaYvf" jsaction="load:XAeZkd;" class="n3VNCb" data-noaft="1" style="width: 100%; height: 280px; margin: 0px;">
+  <p>python projects</p>
+  <p>begginers to advance</p>
+  <p>with code and output</p>
+  <p>:)</p>
+  <div align="center">
+    <button><a href="python projects.html">enroll now</a></button>
+  </div>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>web deigning</h3><br>
+  <img src="https://cdn0.iconfinder.com/data/icons/mobile-development-icons/256/Web_page.png" alt="Web, page, globe, html, internet, web page icon - Download on Iconfinder" jsname="HiaYvf" jsaction="load:XAeZkd;" class="n3VNCb" data-noaft="1" style="width: 100%; height: 280px; margin: 0px;">
+  <p>see templates</p>
+  <p>view code</p>
+  <p>make your own html,css,javascript webpages</p>
+  <p>:)</p>
+  <div align="center">
+    <button>enroll now</button>
+  </div>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3 style="color:rgb(8, 49, 82);">python</h3><br>
+  <img src="https://miro.medium.com/max/2000/1*to0Tp8CBi-vbKvu-ljPukg.png" alt="How to prepare your computer for python coding. - DataDrivenInvestor" jsname="HiaYvf" jsaction="load:XAeZkd;" class="n3VNCb" data-noaft="1" style="width: 100%; height: 280px; margin: 0px;">
+  <p>learn python</p>
+  <p>full course</p>
+  <p>for beginners</p>
+  <p>:)</p>
+  <div align="center">
+    <button><a href="learn python.HTML">enroll now</a></button>
+  </div>
+</div>
+</div>
+
+<div class="w3-container">
+<hr>
+<footer class="w3-container w3-theme-dark w3-padding-16">
+  <h3><b>Codepad</b></h3>
+  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">  
+    <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge"></span>
+  </div>
+  <style>
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .fa-facebook {
+      background: black;
+      color: #808080de;
+    }
+    
+    .fa-twitter {
+      background: black;
+      color: #808080de;
+    }
+    
+    .fa-google {
+      background: black;
+      color: #808080de;
+    }
+    
+    .fa-linkedin {
+      background: black;
+      color: #808080de;
+    }
+    
+    .fa-youtube {
+      background: black;
+      color: #808080de;
+    }
+    
+    .fa-instagram {
+      background: black;
+      color: #808080de;
+    }
+    
+    .fa-pinterest {
+      background: black;
+      color: #808080de;
+    }
+    
+    </style>
+    </head>
+    <body>
+    
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+    <a href="#" class="fa fa-youtube"></a>
+    <a href="#" class="fa fa-instagram"></a>
+    <a href="#" class="fa fa-pinterest"></a>
+</footer>
+
+</body>
+</html>
